@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Karimi\Documents\AndroidMisc\TI cc2541\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="58486f8338090a0cf3b4394abd2406d3b77df62d">
+        <dex dex="C:\Users\Karimi\Documents\AndroidMisc\TI cc2541\WeatherStation\weatherStation\build\intermediates\pre-dexed\debug\classes-abd21dabcd0e5358d0113272ae49cd6d2ee8bbee.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karimi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Karimi\Documents\AndroidMisc\TI cc2541\WeatherStation\weatherStation\build\intermediates\pre-dexed\debug\support-v4-19.1.0-28ac4a145edba98f4e853a73b134cf5b45e80e2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9b1cc6b3d94aab99572da4a6cab57f41994258d1">
+        <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\pre-dexed\debug\classes-60d479181e54cddf7ca01aa443a2b9c3dc51a0e1.jar" />
+    </item>
+
+</items>

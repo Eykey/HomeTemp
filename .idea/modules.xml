@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WeatherStation.iml" filepath="$PROJECT_DIR$/WeatherStation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensorTagLib/sensorTagLib.iml" filepath="$PROJECT_DIR$/sensorTagLib/sensorTagLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weatherStation/weatherStation.iml" filepath="$PROJECT_DIR$/weatherStation/weatherStation.iml" />
+    </modules>
+  </component>
+</project>

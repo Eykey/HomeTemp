@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res"><file name="bluetooth" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-hdpi\bluetooth.png" qualifiers="hdpi" type="drawable"/><file name="list_item_normal" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-hdpi\list_item_normal.xml" qualifiers="hdpi" type="drawable"/><file name="buttonsoffoff" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\buttonsoffoff.png" qualifiers="mdpi" type="drawable"/><file name="buttonsoffon" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\buttonsoffon.png" qualifiers="mdpi" type="drawable"/><file name="buttonsonoff" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\buttonsonoff.png" qualifiers="mdpi" type="drawable"/><file name="buttonsonon" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\buttonsonon.png" qualifiers="mdpi" type="drawable"/><file name="tible" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\tible.png" qualifiers="mdpi" type="drawable"/><file name="ti_stk_2c_pos_rgb_png" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-mdpi\ti_stk_2c_pos_rgb_png.png" qualifiers="mdpi" type="drawable"/><file name="accelerometer" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\accelerometer.png" qualifiers="xhdpi" type="drawable"/><file name="barometer" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\barometer.png" qualifiers="xhdpi" type="drawable"/><file name="gyroscope" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\gyroscope.png" qualifiers="xhdpi" type="drawable"/><file name="humidity" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\humidity.png" qualifiers="xhdpi" type="drawable"/><file name="ic_launcher" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi" type="drawable"/><file name="irtemperature" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\irtemperature.png" qualifiers="xhdpi" type="drawable"/><file name="sensortag" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\sensortag.png" qualifiers="xhdpi" type="drawable"/><file name="sensortag_magnetometer" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\sensortag_magnetometer.png" qualifiers="xhdpi" type="drawable"/><file name="sensortag_simplekeys" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\sensortag_simplekeys.png" qualifiers="xhdpi" type="drawable"/><file name="temperature" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\temperature.png" qualifiers="xhdpi" type="drawable"/><file name="unknown" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\drawable-xhdpi\unknown.png" qualifiers="xhdpi" type="drawable"/><file name="activity_file" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\activity_file.xml" qualifiers="" type="layout"/><file name="activity_fwupdate" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\activity_fwupdate.xml" qualifiers="" type="layout"/><file name="dialog_about" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\dialog_about.xml" qualifiers="" type="layout"/><file name="element_characteristic" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\element_characteristic.xml" qualifiers="" type="layout"/><file name="element_device" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\element_device.xml" qualifiers="" type="layout"/><file name="element_file" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\element_file.xml" qualifiers="" type="layout"/><file name="fragment_help" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\fragment_help.xml" qualifiers="" type="layout"/><file name="fragment_pager" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\fragment_pager.xml" qualifiers="" type="layout"/><file name="fragment_scan" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\fragment_scan.xml" qualifiers="" type="layout"/><file name="services_browser" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\layout\services_browser.xml" qualifiers="" type="layout"/><file name="device_activity_actions" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\menu\device_activity_actions.xml" qualifiers="" type="menu"/><file name="main_activity_actions" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\menu\main_activity_actions.xml" qualifiers="" type="menu"/><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\values\values.xml" qualifiers=""><style name="nameStyle">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">16sp</item>
+    </style><string name="unitRH">%rH\n</string><string name="header">Available BLE Devices</string><style name="ServiceRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#def</item>
+        <item name="android:gravity">center</item>
+    </style><string name="bt_on">Bluetooth was turned on</string><style name="ServiceHeaderItem">
+        <item name="android:layout_span">4</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style><style name="statusStyle.Disabled" parent="statusStyle">
+        <item name="android:textColor">#999999</item>
+        <item name="android:gravity">right</item>
+    </style><style name="ServiceHeaderRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:typeface">serif</item>
+    </style><string name="exit">Exit</string><style name="listItemStyle">
+        <item name="android:background">#abc</item>
+        <item name="android:padding">18dp</item>
+    </style><string name="device">Device</string><string name="sthome">SensorTag Home</string><string name="image">Image</string><string name="prefs">Preferences</string><style name="tbStartStyle">
+        <item name="android:textSize">16sp</item>
+    </style><style name="ServiceItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">18sp</item>
+    </style><string name="app_closing">Exiting application</string><style name="dataStyle">
+        <item name="android:background">#fff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#030</item>
+        <item name="android:textColorHint">#fff</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">8dp</item>
+    </style><string name="unitDegSec3">deg/s\ndeg/s\ndeg/s\n</string><string name="bt_not_on">Bluetooth was not turned on</string><string name="disconnected">Device is not connected</string><string name="gyro">Gyroscope</string><style name="infoStyle">
+        <item name="android:textColor">#3f3</item>
+        <item name="android:textSize">14sp</item>
+    </style><string name="prog_ogoing">Cannot close this view during OAD transfer</string><string name="bt">Bluetooth Adapter</string><string name="unitDeg">deg/C\n</string><string name="acc">Accelerometer</string><string name="cancel">Cancel</string><string name="hum">Humidity</string><string name="no_image_sel">No image selected</string><style name="nameStyle.inactive">
+        <item name="android:textColor">#ccc</item>
+    </style><string name="ble_not_supported">Bluetooth Low-Energy is not supported</string><string name="dev_addr">Device address</string><string name="xyz3">x:\ny:\nz:\n</string><style name="ServiceItemValue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:textSize">18sp</item>
+    </style><style name="logStyle">
+        <item name="android:background">#dde</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style><style name="devlistStyle">
+        <item name="android:dividerHeight">5dp</item>
+    </style><style name="statusStyle.Success" parent="statusStyle">
+        <item name="android:textColor">#336633</item>
+    </style><string name="nodevice">There are no SensorTags advertising within range. Please push the side button on the SensorTag to start advertising.</string><style name="statusStyle.Failure" parent="statusStyle">
+        <item name="android:textColor">#FF0000</item>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><string name="tAmb">Ambience Temperature</string><style name="statusStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">#ccc</item>
+    </style><string-array name="device_filter"><item>SensorTag</item></string-array><string name="load_image_c">Custom</string><string name="btn_txt_confirm">Confirm</string><string name="load_image_b">Image B</string><string name="load_image_a">Image A</string><string name="bar">Barometer</string><style name="statusStyleSmall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">14sp</item>
+    </style><string name="title_device_list">Device List</string><string name="idle">idle</string><string name="start_prog">Start programming</string><string name="no_image">Not an OAD image</string><style name="dataStyle2">
+        <item name="android:textColor">#f33</item>
+        <item name="android:textSize">16sp</item>
+    </style><style name="dataStyle1">
+        <item name="android:textColor">#060</item>
+        <item name="android:textSize">16sp</item>
+    </style><style name="statusStyle.Busy" parent="statusStyle">
+        <item name="android:textColor">#EEEEEE</item>
+    </style><string name="control">Done</string><style name="nameStyleSelected">
+        <item name="android:textColor">#c33</item>
+    </style><string name="cur_image">Current image:</string><string name="new_image">New image:</string><string name="button_scan">Scan</string><string name="tie2e">TI E2E Community</string><string name="bt_not_supported">Bluetooth is not supported</string><string name="about">About</string><string name="unitT3">uT\nuT\nuT\n</string><string name="empty3">*\n*\n*\n</string><string name="keys">Keys</string><style name="tabwidgetStyle">
+        <item name="android:background">#336</item>
+    </style><string name="app_name">SensorTag Application</string><string name="empty1">*\n</string><string name="scan_advice">The Android device is not scanning. Please tap \'Scan\' to scan for SensorTags.</string><string name="title_oad">Firmware update (OAD)</string><string name="unitG3">g\ng\ng\n</string><style name="dirStyle">
+        <item name="android:textColor">#003</item>
+				<item name="android:textSize">20sp</item>
+				<item name="android:layout_margin">10dp</item>
+				<item name="android:gravity">center_horizontal</item>
+    </style><string name="tObj">Object Temperature</string><string name="fwupdate">Firmware update</string><string name="mag">Magnetometer</string><string name="unitPA_Meter">nPA\nmeter</string><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="aboutStyle">
+        <item name="android:background">@android:color/black</item>
+        <item name="android:textColor">#ff0</item>
+        <item name="android:textSize">14sp</item>
+    </style></file><file name="gatt_uuid" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\xml\gatt_uuid.xml" qualifiers="" type="xml"/><file name="list_gradient" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\xml\list_gradient.xml" qualifiers="" type="xml"/><file name="popup" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\xml\popup.xml" qualifiers="" type="xml"/><file name="preferences" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\xml\preferences.xml" qualifiers="" type="xml"/><file name="preference_headers" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\exploded-aar\WeatherStation\sensorTagLib\unspecified\res\xml\preference_headers.xml" qualifiers="" type="xml"/></source></dataSet><dataSet config="main"><source path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res"><file name="bg_box" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\drawable\bg_box.xml" qualifiers="" type="drawable"/><file name="bg_sky" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\drawable\bg_sky.xml" qualifiers="" type="drawable"/><file name="activity_weather_station" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\layout\activity_weather_station.xml" qualifiers="" type="layout"/><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values\dimens.xml" qualifiers=""><dimen name="text_padding_top">8dp</dimen><dimen name="text_temp_size">64dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="text_padding_horizontal_header">12dp</dimen><dimen name="box_vert_inner_spacing">1dp</dimen><dimen name="box_vert_outer_spacing">4dp</dimen><dimen name="text_humi_size">32dp</dimen><dimen name="text_header_size">18dp</dimen><dimen name="text_baro_unit_size">24dp</dimen><dimen name="text_padding_inner">4dp</dimen><dimen name="text_padding_outer">16dp</dimen><dimen name="text_padding_top_header">8dp</dimen><dimen name="box_horizontal_spacing">4dp</dimen><dimen name="text_temp_unit_size">48dp</dimen><dimen name="text_padding_bottom_header">6dp</dimen><dimen name="text_padding_bot">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="text_humi_unit_size">24dp</dimen><dimen name="text_datetime_size">12dp</dimen><dimen name="text_baro_size">32dp</dimen></file><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values\strings.xml" qualifiers=""><string name="btn_link_to_login">Already registred! Login Me.</string><string name="temperature_c_unit">°C</string><string name="barometer_mbar_unit">mBar</string><string name="register">Registration</string><string name="humidity_unit">%</string><string name="btn_register">REGISTER</string><string name="action_settings">Preferences</string><string name="app_name">Weather Station</string><string name="btn_logout">LOGOUT</string><string name="temperature_f_unit">°F</string><string name="pref_temp_unit">Temperature unit</string><string name="temperature_title">Temperature</string><string name="barometer_kpa_unit">kPa</string><string name="welcome">Welcome</string><string name="hint_username">Username</string><string name="humidity_title">Humidity</string><string name="hint_name">Fullname</string><string name="btn_login">LOGIN</string><string name="name">Fullname</string><string name="hint_password">Password</string><string name="barometer_inhg_unit">inHg</string><string name="pref_baro_unit">Pressure unit</string><string name="barometer_title">Pressure</string><string name="btn_link_to_register">Not a member? Sign up now.</string></file><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values\styles.xml" qualifiers=""><style name="text_base">
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">#000000</item>
+    </style><color name="bg_top">#FF00A2D9</color><style name="text_baro_data" parent="text_data">
+        <item name="android:textSize">@dimen/text_baro_size</item>
+    </style><style name="text_humi_unit" parent="text_unit">
+        <item name="android:textSize">@dimen/text_humi_unit_size</item>
+    </style><style name="box_container"/><style name="text_humi_data" parent="text_data">
+        <item name="android:textSize">@dimen/text_humi_size</item>
+    </style><style name="text_baro_unit" parent="text_unit">
+        <item name="android:textSize">@dimen/text_baro_unit_size</item>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="text_unit" parent="text_base">
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingTop">@dimen/text_padding_top</item>
+        <item name="android:paddingBottom">@dimen/text_padding_bot</item>
+        <item name="android:paddingLeft">@dimen/text_padding_inner</item>
+        <item name="android:paddingRight">@dimen/text_padding_outer</item>
+    </style><style name="box_unit_switch" parent="box_content">
+        <item name="android:paddingTop">@dimen/text_padding_top</item>
+        <item name="android:paddingBottom">@dimen/text_padding_bot</item>
+        <item name="android:paddingLeft">@dimen/text_padding_outer</item>
+        <item name="android:paddingRight">@dimen/text_padding_inner</item>
+    </style><style name="text_data" parent="text_base">
+        <item name="android:gravity">right|bottom</item>
+        <item name="android:paddingTop">@dimen/text_padding_top</item>
+        <item name="android:paddingBottom">@dimen/text_padding_bot</item>
+        <item name="android:paddingLeft">@dimen/text_padding_outer</item>
+        <item name="android:paddingRight">@dimen/text_padding_inner</item>
+    </style><style name="text_temp_unit" parent="text_unit">
+        <item name="android:textSize">@dimen/text_temp_unit_size</item>
+    </style><style name="switch_input"/><style name="switch_unit" parent="switch_input">
+        <item name="android:layout_marginBottom">@dimen/box_vert_outer_spacing</item>
+    </style><style name="text_header" parent="text_base">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginTop">@dimen/box_vert_outer_spacing</item>
+        <item name="android:layout_marginBottom">@dimen/box_vert_inner_spacing</item>
+        <item name="android:layout_marginLeft">@dimen/box_horizontal_spacing</item>
+        <item name="android:layout_marginRight">@dimen/box_horizontal_spacing</item>
+        <item name="android:background">@drawable/bg_box</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/text_header_size</item>
+        <item name="android:paddingTop">@dimen/text_padding_top_header</item>
+        <item name="android:paddingBottom">@dimen/text_padding_bottom_header</item>
+        <item name="android:paddingLeft">@dimen/text_padding_horizontal_header</item>
+        <item name="android:paddingRight">@dimen/text_padding_horizontal_header</item>
+    </style><color name="box_line">#FFFFFFFF</color><style name="text_temp_data" parent="text_data">
+        <item name="android:textSize">@dimen/text_temp_size</item>
+    </style><color name="bg_bot">#FF92CEE8</color><color name="box_bg">#66FFFFFF</color><style name="box_content">
+
+        <!-- item name="android:gravity">center_horizontal</item -->
+        <item name="android:layout_marginTop">@dimen/box_vert_inner_spacing</item>
+        <item name="android:layout_marginBottom">@dimen/box_vert_outer_spacing</item>
+        <item name="android:layout_marginLeft">@dimen/box_horizontal_spacing</item>
+        <item name="android:layout_marginRight">@dimen/box_horizontal_spacing</item>
+        <item name="android:background">@drawable/bg_box</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="bg_container">
+        <item name="android:background">@drawable/bg_sky</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style></file><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file><file name="activity_register" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\layout\activity_register.xml" qualifiers="" type="layout"/><file path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\values\colors.xml" qualifiers=""><color name="input_login">#222222</color><color name="bg_register">#2e3237</color><color name="bg_main">#623470</color><color name="toolbar">#a21e79ab</color><color name="lbl_name">#333333</color><color name="btn_logut_bg">#ff6861</color><color name="input_register">#888888</color><color name="btn_login">#26ae90</color><color name="bg_login">#26ae90</color><color name="input_login_hint">#999999</color><color name="input_register_hint">#5e6266</color><color name="btn_login_bg">#eceef1</color><color name="input_register_bg">#3b4148</color><color name="white">#ffffff</color></file><file name="activity_login" path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\res\layout\activity_login.xml" qualifiers="" type="layout"/></source><source path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\generated\res\rs\debug"/><source path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\debug\res"/></dataSet><mergedItems/></merger>
