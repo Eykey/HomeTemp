@@ -63,7 +63,7 @@
     <string name="app_closing">Exiting application</string>
     <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">Weather Station</string>
+    <string name="app_name">Home Temp</string>
     <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="bar">Barometer</string>

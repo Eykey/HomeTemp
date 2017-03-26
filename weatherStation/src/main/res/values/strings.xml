@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Application strings -->
-    <string name="app_name">Weather Station</string>
+    <string name="app_name">Home Temp</string>
     <string name="action_settings">Preferences</string>
     <string name="temperature_title">Temperature</string>
     <string name="barometer_title">Pressure</string>
