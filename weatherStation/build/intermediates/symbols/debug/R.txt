@@ -60,6 +60,8 @@ int drawable tible 0x7f020013
 int drawable unknown 0x7f020014
 int id accPanel 0x7f0c0037
 int id accelerometerTxt 0x7f0c0038
+int id action_addSensor 0x7f0c004e
+int id action_logout 0x7f0c004d
 int id activityLayout 0x7f0c0013
 int id ambPanel 0x7f0c003f
 int id ambientTemperatureTxt 0x7f0c0040
@@ -150,6 +152,7 @@ int layout fragment_scan 0x7f04000b
 int layout services_browser 0x7f04000c
 int menu device_activity_actions 0x7f0b0000
 int menu main_activity_actions 0x7f0b0001
+int menu toolbar_menu 0x7f0b0002
 int mipmap ic_launcher 0x7f030000
 int mipmap ic_launcher_round 0x7f030001
 int string about 0x7f0a0000

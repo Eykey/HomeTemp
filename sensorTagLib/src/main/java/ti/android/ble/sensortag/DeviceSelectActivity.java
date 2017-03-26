@@ -164,6 +164,7 @@ public abstract class DeviceSelectActivity extends ViewPagerActivity {
 		}
 	}
 
+	/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu items for use in the action bar
@@ -199,6 +200,7 @@ public abstract class DeviceSelectActivity extends ViewPagerActivity {
 		}
 		return true;
 	}
+	*/
 
 	private void onUrl(Uri uri) {
 		Intent web = new Intent(Intent.ACTION_VIEW, uri);

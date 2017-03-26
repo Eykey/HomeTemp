@@ -81,6 +81,8 @@ public final class R {
     public static final class id {
         public static final int accPanel=0x7f0c0037;
         public static final int accelerometerTxt=0x7f0c0038;
+        public static final int action_addSensor=0x7f0c004e;
+        public static final int action_logout=0x7f0c004d;
         public static final int activityLayout=0x7f0c0013;
         public static final int ambPanel=0x7f0c003f;
         public static final int ambientTemperatureTxt=0x7f0c0040;
@@ -175,6 +177,7 @@ public final class R {
     public static final class menu {
         public static final int device_activity_actions=0x7f0b0000;
         public static final int main_activity_actions=0x7f0b0001;
+        public static final int toolbar_menu=0x7f0b0002;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

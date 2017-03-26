@@ -8,6 +8,7 @@ package ca.concordia.sensortag.weather;
 
 import java.text.DecimalFormat;
 
+import ca.concordia.sensortag.weather.helper.SessionManager;
 import ti.android.ble.sensortag.Sensor;
 import ca.concordia.sensortag.SensorTagListener;
 import ca.concordia.sensortag.SensorTagLoggerListener;
@@ -21,6 +22,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 //import android.view.MenuItem;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
@@ -78,6 +81,8 @@ public class WeatherStationActivity extends Activity {
 	private SensorTagManager mStManager;
 	private SensorTagListener mStListener;
 
+    private SessionManager session;
+
 	/**
 	 * Called when the Activity is created. Sets up the GUI, checks whether a Bluetooth Device was
 	 * sent from the DeviceConnectActivity via the Intent sent, and initialises the Bluetooth
@@ -99,6 +104,9 @@ public class WeatherStationActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weather_station);
+
+        // Session manager
+        session = new SessionManager(getApplicationContext());
 
 		// Get the Bluetooth device selected by the user - should be set by DeviceSelectActivity
 		Intent receivedIntent = getIntent();
@@ -592,4 +600,45 @@ public class WeatherStationActivity extends Activity {
 
 	}
 
+
+    // creating action button
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            // When logout is clicked
+            case R.id.action_logout:
+                session.setLogin(false);
+                gotoLoginActivity();
+                return true;
+
+            // When AddSensoris clicked
+            case R.id.action_addSensor:
+                addSensor();
+                return true;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    public void gotoLoginActivity(){
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    private void addSensor(){
+        Intent i = new Intent(getApplicationContext(), DeviceSelectActivity.class);
+        startActivity(i);
+        finish();
+    }
 }
