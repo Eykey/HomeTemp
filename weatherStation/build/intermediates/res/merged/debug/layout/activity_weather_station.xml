@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="178dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
@@ -35,10 +35,9 @@
             <TextView
                 android:id="@+id/value_temp"
                 style="@style/text_temp_data"
-                android:layout_width="156dp"
+                android:layout_width="149dp"
                 android:layout_height="match_parent"
-                android:text="27.4"
-                android:layout_weight="0.05" />
+                android:text="27.4" />
 
             <TextView
                 android:id="@+id/unit_temp"
@@ -48,6 +47,15 @@
                 android:layout_weight="0.16"
                 android:text="@string/temperature_c_unit" />
         </LinearLayout>
+
+        <Switch
+            android:id="@+id/temp_unit_switch"
+            style="@style/switch_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textOff="@string/temperature_c_unit"
+            android:textOn="@string/temperature_f_unit" />
 
         <TextView
             android:id="@+id/header_humi"
@@ -82,36 +90,7 @@
 
 
 
-        <LinearLayout
-            android:id="@+id/layout_baro"
-            style="@style/box_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|top" >
-
-
-
-
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout_units"
-            style="@style/box_unit_switch"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="left|top"
-            android:orientation="vertical" >
-
-            <Switch
-                android:id="@+id/temp_unit_switch"
-                style="@style/switch_unit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/pref_temp_unit"
-                android:textOff="@string/temperature_c_unit"
-                android:textOn="@string/temperature_f_unit" />
-
-        </LinearLayout>
-    </LinearLayout>
 
 </RelativeLayout>

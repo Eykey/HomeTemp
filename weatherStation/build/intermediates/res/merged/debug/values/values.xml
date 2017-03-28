@@ -5,7 +5,7 @@
     <color name="bg_login">#26ae90</color>
     <color name="bg_main">#623470</color>
     <color name="bg_register">#2e3237</color>
-    <color name="bg_top">#fdf105</color>
+    <color name="bg_top">#e6db03</color>
     <color name="box_bg">#66FFFFFF</color>
     <color name="box_line">#FFFFFFFF</color>
     <color name="btn_login">#26ae90</color>
@@ -116,10 +116,14 @@
     <string name="welcome">Welcome</string>
     <string name="xyz3">x:\ny:\nz:\n</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <style name="ServiceHeaderItem">
         <item name="android:layout_span">4</item>
@@ -170,7 +174,7 @@
     <style name="box_container"/>
     <style name="box_content">
 
-        
+        <!-- item name="android:gravity">center_horizontal</item -->
         <item name="android:layout_marginTop">@dimen/box_vert_inner_spacing</item>
         <item name="android:layout_marginBottom">@dimen/box_vert_outer_spacing</item>
         <item name="android:layout_marginLeft">@dimen/box_horizontal_spacing</item>

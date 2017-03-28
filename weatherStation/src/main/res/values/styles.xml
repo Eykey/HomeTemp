@@ -1,6 +1,6 @@
 <resources>
 
-    <color name="bg_top">#fdf105</color>
+    <color name="bg_top">#e6db03</color>
     <color name="bg_bot">#fffc90</color>
     <color name="box_bg">#66FFFFFF</color>
     <color name="box_line">#FFFFFFFF</color>
