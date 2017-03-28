@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/build/intermediates/bundles/debug/res/values/values.xml -->
-    <eat-comment/>
     <string-array name="device_filter"><item>SensorTag</item></string-array>
     <string name="about">About</string>
     <string name="acc">Accelerometer</string>

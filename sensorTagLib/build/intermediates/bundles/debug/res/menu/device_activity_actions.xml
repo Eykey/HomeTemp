@@ -11,4 +11,4 @@
         android:id="@+id/opt_about"
         android:title="@string/about"/>
 
-</menu><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/menu/device_activity_actions.xml -->
+</menu>

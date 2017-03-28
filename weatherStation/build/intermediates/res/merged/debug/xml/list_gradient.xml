@@ -3,4 +3,4 @@
 
     <item android:drawable="@drawable/list_item_normal" />
 
-</selector><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/xml/list_gradient.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/xml/list_gradient.xml -->
+</selector>

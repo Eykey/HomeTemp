@@ -71,4 +71,4 @@
         android:padding="10dp"
         android:text="@string/button_scan" />
 
-</LinearLayout><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/layout/fragment_scan.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/build/intermediates/bundles/debug/res/layout/fragment_scan.xml -->
+</LinearLayout>

@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string-array name="device_filter"><item>SensorTag</item></string-array>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <color name="bg_bot">#FF92CEE8</color>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/colors.xml -->
-    <eat-comment/>
     <color name="bg_login">#26ae90</color>
     <color name="bg_main">#623470</color>
     <color name="bg_register">#2e3237</color>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <color name="bg_top">#FF00A2D9</color>
     <color name="box_bg">#66FFFFFF</color>
     <color name="box_line">#FFFFFFFF</color>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/colors.xml -->
-    <eat-comment/>
     <color name="btn_login">#26ae90</color>
     <color name="btn_login_bg">#eceef1</color>
     <color name="btn_logut_bg">#ff6861</color>
@@ -29,8 +19,6 @@
     <color name="lbl_name">#333333</color>
     <color name="toolbar">#a21e79ab</color>
     <color name="white">#ffffff</color>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/dimens.xml -->
-    <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="box_horizontal_spacing">4dp</dimen>
@@ -51,44 +39,26 @@
     <dimen name="text_padding_top_header">8dp</dimen>
     <dimen name="text_temp_size">64dp</dimen>
     <dimen name="text_temp_unit_size">48dp</dimen>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="about">About</string>
     <string name="acc">Accelerometer</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="action_settings">Preferences</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="app_closing">Exiting application</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="app_name">Home Temp</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="bar">Barometer</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="barometer_inhg_unit">inHg</string>
     <string name="barometer_kpa_unit">kPa</string>
     <string name="barometer_mbar_unit">mBar</string>
     <string name="barometer_title">Pressure</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="ble_not_supported">Bluetooth Low-Energy is not supported</string>
     <string name="bt">Bluetooth Adapter</string>
     <string name="bt_not_on">Bluetooth was not turned on</string>
     <string name="bt_not_supported">Bluetooth is not supported</string>
     <string name="bt_on">Bluetooth was turned on</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="btn_link_to_login">Already registred! Login Me.</string>
     <string name="btn_link_to_register">Not a member? Sign up now.</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="btn_register">REGISTER</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="btn_txt_confirm">Confirm</string>
     <string name="button_scan">Scan</string>
     <string name="cancel">Cancel</string>
@@ -103,20 +73,12 @@
     <string name="fwupdate">Firmware update</string>
     <string name="gyro">Gyroscope</string>
     <string name="header">Available BLE Devices</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="hint_name">Fullname</string>
     <string name="hint_password">Password</string>
     <string name="hint_username">Username</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="hum">Humidity</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="humidity_title">Humidity</string>
     <string name="humidity_unit">%</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="idle">idle</string>
     <string name="image">Image</string>
     <string name="keys">Keys</string>
@@ -124,40 +86,24 @@
     <string name="load_image_b">Image B</string>
     <string name="load_image_c">Custom</string>
     <string name="mag">Magnetometer</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="name">Fullname</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="new_image">New image:</string>
     <string name="no_image">Not an OAD image</string>
     <string name="no_image_sel">No image selected</string>
     <string name="nodevice">There are no SensorTags advertising within range. Please push the side button on the SensorTag to start advertising.</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="pref_baro_unit">Pressure unit</string>
     <string name="pref_temp_unit">Temperature unit</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="prefs">Preferences</string>
     <string name="prog_ogoing">Cannot close this view during OAD transfer</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="register">Registration</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="scan_advice">The Android device is not scanning. Please tap \'Scan\' to scan for SensorTags.</string>
     <string name="start_prog">Start programming</string>
     <string name="sthome">SensorTag Home</string>
     <string name="tAmb">Ambience Temperature</string>
     <string name="tObj">Object Temperature</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="temperature_c_unit">°C</string>
     <string name="temperature_f_unit">°F</string>
     <string name="temperature_title">Temperature</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="tie2e">TI E2E Community</string>
     <string name="title_device_list">Device List</string>
     <string name="title_oad">Firmware update (OAD)</string>
@@ -167,14 +113,8 @@
     <string name="unitPA_Meter">nPA\nmeter</string>
     <string name="unitRH">%rH\n</string>
     <string name="unitT3">uT\nuT\nuT\n</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="welcome">Welcome</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <string name="xyz3">x:\ny:\nz:\n</string>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
@@ -185,8 +125,6 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <style name="ServiceHeaderItem">
         <item name="android:layout_span">4</item>
         <item name="android:textSize">20sp</item>
@@ -226,8 +164,6 @@
         <item name="android:textColor">#ff0</item>
         <item name="android:textSize">14sp</item>
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <style name="bg_container">
         <item name="android:background">@drawable/bg_sky</item>
         <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
@@ -251,8 +187,6 @@
         <item name="android:paddingLeft">@dimen/text_padding_outer</item>
         <item name="android:paddingRight">@dimen/text_padding_inner</item>
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <style name="dataStyle">
         <item name="android:background">#fff</item>
         <item name="android:textSize">16sp</item>
@@ -329,22 +263,16 @@
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textSize">14sp</item>
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <style name="switch_input"/>
     <style name="switch_unit" parent="switch_input">
         <item name="android:layout_marginBottom">@dimen/box_vert_outer_spacing</item>
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/values/values.xml -->
-    <eat-comment/>
     <style name="tabwidgetStyle">
         <item name="android:background">#336</item>
     </style>
     <style name="tbStartStyle">
         <item name="android:textSize">16sp</item>
     </style>
-    <!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <style name="text_baro_data" parent="text_data">
         <item name="android:textSize">@dimen/text_baro_size</item>
     </style>

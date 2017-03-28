@@ -5,4 +5,4 @@
         android:icon="@drawable/bluetooth"
         android:summary="An example of some preferences."
         android:title="Prefs 1" />
-</preference-headers><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/xml/preference_headers.xml -->
+</preference-headers>

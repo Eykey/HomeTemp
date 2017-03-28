@@ -17,4 +17,4 @@
         android:title="@string/exit"/>
 
 
-</menu><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/menu/main_activity_actions.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/menu/main_activity_actions.xml -->
+</menu>

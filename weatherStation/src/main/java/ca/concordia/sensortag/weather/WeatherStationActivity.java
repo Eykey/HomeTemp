@@ -188,14 +188,14 @@ public class WeatherStationActivity extends Activity {
 		// Get references to the GUI text box objects
 		mTemperatureView = (TextView) findViewById(R.id.value_temp);
 		mTemperatureUnitView = (TextView) findViewById(R.id.unit_temp);
-		mBarometerView = (TextView) findViewById(R.id.value_baro);
-		mBarometerUnitView = (TextView) findViewById(R.id.unit_baro);
+		//mBarometerView = (TextView) findViewById(R.id.value_baro);
+		//mBarometerUnitView = (TextView) findViewById(R.id.unit_baro);
 		mHumidityView = (TextView) findViewById(R.id.value_humi);
 		mHumidityUnitView = (TextView) findViewById(R.id.unit_humi);
 
 		// Set up the GUI switches for displayed measurement units
 		mTemperatureUnitSwitch = (Switch) findViewById(R.id.temp_unit_switch);
-		mBarometerUnitSwitch = (Switch) findViewById(R.id.baro_unit_switch);
+		//mBarometerUnitSwitch = (Switch) findViewById(R.id.baro_unit_switch);
 
 		/* The code below shows you how you can capture a "click" event, in order to run some code
 		 * whenever the user clicks on a switch. The button and other GUI elements follow a similar

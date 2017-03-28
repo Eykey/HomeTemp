@@ -93,4 +93,4 @@
     <item uuid="0xFFF4">Simple Profile Characteristic 4</item>
     <item uuid="0xFFF5">Simple Profile Characteristic 5</item>
   </profile>
-</gattuuid><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/xml/gatt_uuid.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/xml/gatt_uuid.xml -->
+</gattuuid>

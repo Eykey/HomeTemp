@@ -137,4 +137,4 @@
         android:onClick="onStart"
         android:text="@string/start_prog" />
 
-</LinearLayout><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/layout/activity_fwupdate.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/layout/activity_fwupdate.xml -->
+</LinearLayout>

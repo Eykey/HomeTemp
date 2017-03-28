@@ -38,4 +38,4 @@
         android:gravity="center"
         android:text="Connect" />
 
-</LinearLayout><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/sensorTagLib/src/main/res/layout/element_device.xml --><!-- From: file:/C:/Users/Karimi/AndroidStudioProjects/WeatherStation/weatherStation/build/intermediates/exploded-aar/WeatherStation/sensorTagLib/unspecified/res/layout/element_device.xml -->
+</LinearLayout>
