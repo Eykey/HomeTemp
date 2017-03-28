@@ -251,9 +251,11 @@ public class WeatherStationActivity extends Activity {
 
 		});
 
+/*
+
 		mBarometerUnitSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-			/**
+			*//**
 			 * Called when the mBarometerUnitSwitch switch is clicked, causing the state to
 			 * change. Saves the inHg/kPa unit setting and updates the display to show the
 			 * desired unit.
@@ -261,7 +263,7 @@ public class WeatherStationActivity extends Activity {
 			 * @param buttonView The mBarometerUnitSwitch switch object
 			 * @param isChecked  Whether the switch is in the checked (inHg) or unchecked
 			 * (kPa) state.
-			 */
+			 ***//*
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// Save the unit so we know what to use when a new measurement comes in.
@@ -272,12 +274,13 @@ public class WeatherStationActivity extends Activity {
 				updateDisplayedUnits();
 			}
 
-		});
+		}); */
+
 
 		// Initial values for the measurements on the GUI: before the SensorTag is all ready to go
 		// and has sent its first sensor values, we want to show dashes as a placeholder.
 		mTemperatureView.setText("--.-");
-		mBarometerView.setText("---.-");
+		//mBarometerView.setText("---.-");
 		mHumidityView.setText("--.-");
 	}
 

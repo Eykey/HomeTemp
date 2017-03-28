@@ -35,16 +35,17 @@
             <TextView
                 android:id="@+id/value_temp"
                 style="@style/text_temp_data"
-                android:layout_width="232dp"
+                android:layout_width="156dp"
                 android:layout_height="match_parent"
-                android:text="27.4" />
+                android:text="27.4"
+                android:layout_weight="0.05" />
 
             <TextView
                 android:id="@+id/unit_temp"
                 style="@style/text_temp_unit"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.14"
+                android:layout_weight="0.16"
                 android:text="@string/temperature_c_unit" />
         </LinearLayout>
 

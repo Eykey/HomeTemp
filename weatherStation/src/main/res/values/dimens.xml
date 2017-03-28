@@ -9,8 +9,8 @@
     
     <dimen name="text_datetime_size">12dp</dimen>
     <dimen name="text_header_size">18dp</dimen>
-    <dimen name="text_temp_size">64dp</dimen>
-    <dimen name="text_temp_unit_size">48dp</dimen>
+    <dimen name="text_temp_size">40dp</dimen>
+    <dimen name="text_temp_unit_size">40dp</dimen>
     <dimen name="text_baro_size">32dp</dimen>
     <dimen name="text_baro_unit_size">24dp</dimen>
     <dimen name="text_humi_size">32dp</dimen>

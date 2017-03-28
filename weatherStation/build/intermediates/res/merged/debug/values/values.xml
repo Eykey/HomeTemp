@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="device_filter"><item>SensorTag</item></string-array>
-    <color name="bg_bot">#FF92CEE8</color>
+    <color name="bg_bot">#fffc90</color>
     <color name="bg_login">#26ae90</color>
     <color name="bg_main">#623470</color>
     <color name="bg_register">#2e3237</color>
-    <color name="bg_top">#FF00A2D9</color>
+    <color name="bg_top">#fdf105</color>
     <color name="box_bg">#66FFFFFF</color>
     <color name="box_line">#FFFFFFFF</color>
     <color name="btn_login">#26ae90</color>
@@ -37,8 +37,8 @@
     <dimen name="text_padding_outer">16dp</dimen>
     <dimen name="text_padding_top">8dp</dimen>
     <dimen name="text_padding_top_header">8dp</dimen>
-    <dimen name="text_temp_size">64dp</dimen>
-    <dimen name="text_temp_unit_size">48dp</dimen>
+    <dimen name="text_temp_size">40dp</dimen>
+    <dimen name="text_temp_unit_size">40dp</dimen>
     <string name="about">About</string>
     <string name="acc">Accelerometer</string>
     <string name="action_settings">Preferences</string>
@@ -116,14 +116,10 @@
     <string name="welcome">Welcome</string>
     <string name="xyz3">x:\ny:\nz:\n</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+        
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
     <style name="ServiceHeaderItem">
         <item name="android:layout_span">4</item>
@@ -174,7 +170,7 @@
     <style name="box_container"/>
     <style name="box_content">
 
-        <!-- item name="android:gravity">center_horizontal</item -->
+        
         <item name="android:layout_marginTop">@dimen/box_vert_inner_spacing</item>
         <item name="android:layout_marginBottom">@dimen/box_vert_outer_spacing</item>
         <item name="android:layout_marginLeft">@dimen/box_horizontal_spacing</item>
