@@ -13,9 +13,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="178dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/header_tempideal"
+            style="@style/text_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ideal_temperature_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_tempideal"
+            style="@style/box_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:gravity="bottom" >
+
+            <EditText
+                android:id="@+id/ideal_temp"
+                android:inputType="number"
+                style="@style/text_temp_data"
+                android:layout_width="149dp"
+                android:layout_height="match_parent"
+                android:text="22" />
+
+            <TextView
+                android:id="@+id/unit_temp2"
+                style="@style/text_temp_unit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.16"
+                android:text="@string/temperature_c_unit" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/idealtemp_button"
+            style="@style/button_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Temperature"/>
+
+
 
         <TextView
             android:id="@+id/header_temp"
@@ -86,11 +126,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.17"
                 android:text="@string/humidity_unit" />
+
+        </LinearLayout>
+
         </LinearLayout>
 
 
-
-        </LinearLayout>
 
 
 </RelativeLayout>

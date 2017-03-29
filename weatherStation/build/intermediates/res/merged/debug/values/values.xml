@@ -79,6 +79,7 @@
     <string name="hum">Humidity</string>
     <string name="humidity_title">Humidity</string>
     <string name="humidity_unit">%</string>
+    <string name="ideal_temperature_title">Enter Desired Temperature</string>
     <string name="idle">idle</string>
     <string name="image">Image</string>
     <string name="keys">Keys</string>
@@ -186,6 +187,20 @@
         <item name="android:paddingBottom">@dimen/text_padding_bot</item>
         <item name="android:paddingLeft">@dimen/text_padding_outer</item>
         <item name="android:paddingRight">@dimen/text_padding_inner</item>
+    </style>
+    <style name="button_temp" parent="text_base">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/box_vert_outer_spacing</item>
+        <item name="android:layout_marginBottom">@dimen/box_vert_inner_spacing</item>
+        <item name="android:layout_marginLeft">@dimen/box_horizontal_spacing</item>
+        <item name="android:layout_marginRight">@dimen/box_horizontal_spacing</item>
+        <item name="android:background">@drawable/bg_box</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_header_size</item>
+        <item name="android:paddingTop">@dimen/text_padding_top_header</item>
+        <item name="android:paddingBottom">@dimen/text_padding_bottom_header</item>
+        <item name="android:paddingLeft">@dimen/text_padding_horizontal_header</item>
+        <item name="android:paddingRight">@dimen/text_padding_horizontal_header</item>
     </style>
     <style name="dataStyle">
         <item name="android:background">#fff</item>

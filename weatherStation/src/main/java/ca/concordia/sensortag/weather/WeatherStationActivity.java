@@ -24,8 +24,11 @@ import android.view.Menu;
 //import android.view.MenuItem;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +43,7 @@ import android.widget.Toast;
 public class WeatherStationActivity extends Activity {
 
 	static public final String TAG = "WeatherSt"; // Tag for Android's logcat
-	static protected final int UPDATE_PERIOD_MS = 1000; // How often measurements should be taken
+	static protected final int UPDATE_PERIOD_MS = 2000; // How often measurements should be taken
 
 	// Define formatters for converting the sensor measurement into a string to show on the screen
 	private final static DecimalFormat tempFormat = new DecimalFormat("###0.0;-##0.0");
@@ -51,12 +54,15 @@ public class WeatherStationActivity extends Activity {
 	// Switch is the Java class for the on-off switch element
 	private TextView mTemperatureView;
 	private TextView mTemperatureUnitView;
-	private TextView mBarometerView;
-	private TextView mBarometerUnitView;
+	private EditText IdealTempEdit;
+	private TextView IdealTempUnitView;
+	//private TextView mBarometerView;
+	//private TextView mBarometerUnitView;
 	private TextView mHumidityView;
 	@SuppressWarnings("unused")
 	private TextView mHumidityUnitView;
 
+	private Button SetTempButton;
 	private Switch mTemperatureUnitSwitch;
 	private Switch mBarometerUnitSwitch;
 
@@ -64,10 +70,13 @@ public class WeatherStationActivity extends Activity {
 	// We save this so that, if the user changes the unit, we can immediately update the GUI
 	// (if we didn't have the last value, we'd have to wait until a new value is received to
 	// calculate and show it in the correct unit).
+	private double minRange = Double.NaN;
+	private double maxRange = Double.NaN;
+
 	private double mLastTemperature = Double.NaN;
 	@SuppressWarnings("unused")
 	private double mLastHumidity = Double.NaN;
-	private double mLastPressure = Double.NaN;
+	//private double mLastPressure = Double.NaN;
 
 	// Unit setting - these values are used to determine which unit to show for temp/pressure.
 	// They are changed when the user clicks the switches to change the unit.
@@ -168,10 +177,13 @@ public class WeatherStationActivity extends Activity {
 		else
 			res = res && mStManager.enableSensor(Sensor.IR_TEMPERATURE);
 
+		/*
 		if (mStManager.isPeriodSupported(Sensor.BAROMETER))
 			res = res && mStManager.enableSensor(Sensor.BAROMETER, UPDATE_PERIOD_MS);
 		else
 			res = res && mStManager.enableSensor(Sensor.BAROMETER);
+		*/
+
 
 		if (mStManager.isPeriodSupported(Sensor.HUMIDITY))
 			res = res && mStManager.enableSensor(Sensor.HUMIDITY, UPDATE_PERIOD_MS);
@@ -192,6 +204,10 @@ public class WeatherStationActivity extends Activity {
 		//mBarometerUnitView = (TextView) findViewById(R.id.unit_baro);
 		mHumidityView = (TextView) findViewById(R.id.value_humi);
 		mHumidityUnitView = (TextView) findViewById(R.id.unit_humi);
+
+		IdealTempEdit = (EditText) findViewById(R.id.ideal_temp);
+		IdealTempUnitView = (TextView) findViewById(R.id.unit_temp2);
+		SetTempButton = (Button) findViewById(R.id.idealtemp_button);
 
 		// Set up the GUI switches for displayed measurement units
 		mTemperatureUnitSwitch = (Switch) findViewById(R.id.temp_unit_switch);
@@ -251,6 +267,15 @@ public class WeatherStationActivity extends Activity {
 
 		});
 
+		SetTempButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				minRange = Double.parseDouble(IdealTempEdit.getText().toString()) - convertTemperatureUnit(2);
+				maxRange = Double.parseDouble(IdealTempEdit.getText().toString()) + convertTemperatureUnit(2);
+			}
+		});
+
 /*
 
 		mBarometerUnitSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -280,7 +305,7 @@ public class WeatherStationActivity extends Activity {
 		// Initial values for the measurements on the GUI: before the SensorTag is all ready to go
 		// and has sent its first sensor values, we want to show dashes as a placeholder.
 		mTemperatureView.setText("--.-");
-		//mBarometerView.setText("---.-");
+		IdealTempEdit.setText("22");
 		mHumidityView.setText("--.-");
 	}
 
@@ -356,16 +381,25 @@ public class WeatherStationActivity extends Activity {
 	 */
 	private void updateDisplayedUnits() {
 		// Update the unit text for the temperature (desired unit = mIsTempFahrenheit)
-		if (mIsTempFahrenheit)
+		if (mIsTempFahrenheit) {
 			mTemperatureUnitView.setText(getString(R.string.temperature_f_unit));
-		else
+			IdealTempUnitView.setText(getString(R.string.temperature_f_unit));
+		}
+		else {
 			mTemperatureUnitView.setText(getString(R.string.temperature_c_unit));
+			IdealTempUnitView.setText(getString(R.string.temperature_c_unit));
+		}
 
 		// Recalculate the temperature in the desired unit (desired unit = mIsTempFahrenheit)
 		double displayTemp = convertTemperatureUnit(mLastTemperature);
+		double tempedit = Double.parseDouble(IdealTempEdit.getText().toString());
+		double displayTemp2 = convertTemperatureUnitB(tempedit);
+
 		// Take the calculated temperature and show it on the GUI
 		mTemperatureView.setText(tempFormat.format(displayTemp));
+		IdealTempEdit.setText(tempFormat.format(displayTemp2));
 
+		/*
 		// Update the unit text for the atmospheric pressure (Desired unit = mBaroUnit)
 		switch (mBaroUnit) {
 		case INCH_HG:
@@ -380,11 +414,14 @@ public class WeatherStationActivity extends Activity {
 		default:
 			break;
 		}
+		*/
 
+		/*
 		// Recalculate the barometer measurement in the desired unit
 		double displayBaro = convertBarometerUnit(mLastPressure);
 		// Take the calculated temperature and show it on the GUI
 		mBarometerView.setText(baroFormat.format(displayBaro));
+		*/
 	}
 
 	/**
@@ -399,30 +436,13 @@ public class WeatherStationActivity extends Activity {
 		return mIsTempFahrenheit ? (1.8 * celsius + 32) : celsius;
 	}
 
-	/**
-	 * Convert the barometric pressure to the unit currently set by the loaded settings (mBaroUnit
-	 * member variable).
-	 * 
-	 * @param kpa
-	 *            The value in kilopascals.
-	 * @return The converted barometric pressure value.
-	 */
-	private double convertBarometerUnit(double kpa) {
-		double result;
-		switch (mBaroUnit) {
-		case INCH_HG:
-			result = 0.295299830714 * kpa;
-			break;
-		case MILLIBAR:
-			result = 10 * kpa;
-			break;
-		case KILOPASCAL: // fallthrough
-		default:
-			result = kpa;
-			break;
-		}
-		return result;
+	private  double convertTemperatureUnitB(double temp) {
+		if (!mIsTempFahrenheit)
+			return (temp -32)/1.8;
+		else
+			return (1.8*temp)+32;
 	}
+
 
 	/**
 	 * Handles events from the SensorTagManager: SensorTag status updates, sensor measurements, etc.
@@ -453,7 +473,7 @@ public class WeatherStationActivity extends Activity {
 			mLastTemperature = temp;
 
 			// Convert the measurement to the unit desired by the user.
-			double displayTemp = convertTemperatureUnit(temp);
+			final double displayTemp = convertTemperatureUnit(temp);
 
 			// Format the temperature (double) into a string, with one digit after the decimal
 			// point (this format is defined by tempFormat: see declaration at top of file).
@@ -468,6 +488,9 @@ public class WeatherStationActivity extends Activity {
 				public void run() {
 					// Change the text in the temperature TextView to the new value
 					mTemperatureView.setText(tempText);
+
+					VerifyRange(displayTemp);
+
 				}
 
 			});
@@ -480,6 +503,8 @@ public class WeatherStationActivity extends Activity {
 		 * @see ca.concordia.sensortag.SensorTagLoggerListener#onUpdateBarometer(ca.concordia.sensortag.SensorTagManager,
 		 *      double, double)
 		 */
+
+		/*
 		@Override
 		public void onUpdateBarometer(SensorTagManager mgr, double pressure, double height) {
 			super.onUpdateBarometer(mgr, pressure, height);
@@ -498,6 +523,7 @@ public class WeatherStationActivity extends Activity {
 			});
 
 		}
+		*/
 
 		/**
 		 * Called on receiving a new humidity measurement. Displays the new value.
@@ -644,4 +670,18 @@ public class WeatherStationActivity extends Activity {
         startActivity(i);
         finish();
     }
+
+    public void VerifyRange(double temp){
+		if(convertTemperatureUnit(minRange) > temp){
+			Toast.makeText(getApplicationContext(),
+					"Area is cold! ", Toast.LENGTH_SHORT)
+					.show();
+		}
+		if (convertTemperatureUnit(maxRange) < temp) {
+			Toast.makeText(getApplicationContext(),
+					"Area is hot!", Toast.LENGTH_SHORT)
+					.show();
+		}
+
+	}
 }

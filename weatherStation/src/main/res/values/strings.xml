@@ -5,6 +5,7 @@
     <string name="app_name">Home Temp</string>
     <string name="action_settings">Preferences</string>
     <string name="temperature_title">Temperature</string>
+    <string name="ideal_temperature_title">Enter Desired Temperature</string>
     <string name="barometer_title">Pressure</string>
     <string name="humidity_title">Humidity</string>
     <string name="temperature_c_unit">°C</string>

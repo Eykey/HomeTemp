@@ -3,30 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Miguel/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/Miguel/StudioProjects/HomeTemp/weatherStation/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_50a064309e2f5f23dbd0cfb15e0f0c2f9e933773/classes.dex" />
+        sha1="5e35009582ac6ae63170b16de4f500f2a45a7e50">
+        <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4e9242c54f0a2bd00117bf07ded24f3b95053bf9\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Miguel/StudioProjects/HomeTemp/weatherStation/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/Miguel/StudioProjects/HomeTemp/weatherStation/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dfe83ec23332fc1a5490ed0d14d72ad044a5ba5a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Miguel/StudioProjects/HomeTemp/weatherStation/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5605af133ee3f60bf1ccf35a7eb8fb3f2cc47fdb">
-        <dex dex="/Users/Miguel/StudioProjects/HomeTemp/weatherStation/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8345d06af4901f94a9f6fbe39d85932fae656e88/classes.dex" />
+        <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a34c38a97756731679af104f079de4b4919f7567\classes.dex" />
     </item>
 
 </items>
