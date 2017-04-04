@@ -21,7 +21,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-//import android.view.MenuItem;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,7 +47,7 @@ public class WeatherStationActivity extends Activity {
 	// Define formatters for converting the sensor measurement into a string to show on the screen
 	private final static DecimalFormat tempFormat = new DecimalFormat("###0.0;-##0.0");
 	private final static DecimalFormat humiFormat = new DecimalFormat("##0.0");
-	private final static DecimalFormat baroFormat = new DecimalFormat("#00.00");
+;
 
 	// GUI elements - TextView is the Java class for text-box elements on the screen, and
 	// Switch is the Java class for the on-off switch element
@@ -56,8 +55,6 @@ public class WeatherStationActivity extends Activity {
 	private TextView mTemperatureUnitView;
 	private EditText IdealTempEdit;
 	private TextView IdealTempUnitView;
-	//private TextView mBarometerView;
-	//private TextView mBarometerUnitView;
 	private TextView mHumidityView;
 	@SuppressWarnings("unused")
 	private TextView mHumidityUnitView;
@@ -177,13 +174,6 @@ public class WeatherStationActivity extends Activity {
 		else
 			res = res && mStManager.enableSensor(Sensor.IR_TEMPERATURE);
 
-		/*
-		if (mStManager.isPeriodSupported(Sensor.BAROMETER))
-			res = res && mStManager.enableSensor(Sensor.BAROMETER, UPDATE_PERIOD_MS);
-		else
-			res = res && mStManager.enableSensor(Sensor.BAROMETER);
-		*/
-
 
 		if (mStManager.isPeriodSupported(Sensor.HUMIDITY))
 			res = res && mStManager.enableSensor(Sensor.HUMIDITY, UPDATE_PERIOD_MS);
@@ -200,18 +190,16 @@ public class WeatherStationActivity extends Activity {
 		// Get references to the GUI text box objects
 		mTemperatureView = (TextView) findViewById(R.id.value_temp);
 		mTemperatureUnitView = (TextView) findViewById(R.id.unit_temp);
-		//mBarometerView = (TextView) findViewById(R.id.value_baro);
-		//mBarometerUnitView = (TextView) findViewById(R.id.unit_baro);
 		mHumidityView = (TextView) findViewById(R.id.value_humi);
 		mHumidityUnitView = (TextView) findViewById(R.id.unit_humi);
-
 		IdealTempEdit = (EditText) findViewById(R.id.ideal_temp);
 		IdealTempUnitView = (TextView) findViewById(R.id.unit_temp2);
+
 		SetTempButton = (Button) findViewById(R.id.idealtemp_button);
 
 		// Set up the GUI switches for displayed measurement units
 		mTemperatureUnitSwitch = (Switch) findViewById(R.id.temp_unit_switch);
-		//mBarometerUnitSwitch = (Switch) findViewById(R.id.baro_unit_switch);
+
 
 		/* The code below shows you how you can capture a "click" event, in order to run some code
 		 * whenever the user clicks on a switch. The button and other GUI elements follow a similar
@@ -273,33 +261,10 @@ public class WeatherStationActivity extends Activity {
 
 				minRange = Double.parseDouble(IdealTempEdit.getText().toString()) - convertTemperatureUnit(2);
 				maxRange = Double.parseDouble(IdealTempEdit.getText().toString()) + convertTemperatureUnit(2);
+                Toast.makeText(getApplicationContext(), "Desired Temperature is Set.", Toast.LENGTH_SHORT).show();
+
 			}
 		});
-
-/*
-
-		mBarometerUnitSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			*//**
-			 * Called when the mBarometerUnitSwitch switch is clicked, causing the state to
-			 * change. Saves the inHg/kPa unit setting and updates the display to show the
-			 * desired unit.
-			 * 
-			 * @param buttonView The mBarometerUnitSwitch switch object
-			 * @param isChecked  Whether the switch is in the checked (inHg) or unchecked
-			 * (kPa) state.
-			 ***//*
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				// Save the unit so we know what to use when a new measurement comes in.
-				mBaroUnit = isChecked ? BarometerUnit.INCH_HG : BarometerUnit.KILOPASCAL;
-				
-				// And update the measurements that are shown on the screen right now to use the
-				// changed unit.
-				updateDisplayedUnits();
-			}
-
-		}); */
 
 
 		// Initial values for the measurements on the GUI: before the SensorTag is all ready to go
@@ -399,29 +364,6 @@ public class WeatherStationActivity extends Activity {
 		mTemperatureView.setText(tempFormat.format(displayTemp));
 		IdealTempEdit.setText(tempFormat.format(displayTemp2));
 
-		/*
-		// Update the unit text for the atmospheric pressure (Desired unit = mBaroUnit)
-		switch (mBaroUnit) {
-		case INCH_HG:
-			mBarometerUnitView.setText(getString(R.string.barometer_inhg_unit));
-			break;
-		case KILOPASCAL:
-			mBarometerUnitView.setText(getString(R.string.barometer_kpa_unit));
-			break;
-		case MILLIBAR:
-			mBarometerUnitView.setText(getString(R.string.barometer_mbar_unit));
-			break;
-		default:
-			break;
-		}
-		*/
-
-		/*
-		// Recalculate the barometer measurement in the desired unit
-		double displayBaro = convertBarometerUnit(mLastPressure);
-		// Take the calculated temperature and show it on the GUI
-		mBarometerView.setText(baroFormat.format(displayBaro));
-		*/
 	}
 
 	/**
@@ -496,34 +438,6 @@ public class WeatherStationActivity extends Activity {
 			});
 
 		}
-
-		/**
-		 * Called on receiving a new pressure measurement. Displays the new value.
-		 * 
-		 * @see ca.concordia.sensortag.SensorTagLoggerListener#onUpdateBarometer(ca.concordia.sensortag.SensorTagManager,
-		 *      double, double)
-		 */
-
-		/*
-		@Override
-		public void onUpdateBarometer(SensorTagManager mgr, double pressure, double height) {
-			super.onUpdateBarometer(mgr, pressure, height);
-
-			// This is the same idea as onUpdateAmbientTemperature() above.
-			mLastPressure = pressure;
-			double displayPressure = convertBarometerUnit(pressure);
-			final String baroText = baroFormat.format(displayPressure);
-			runOnUiThread(new Runnable() {
-
-				@Override
-				public void run() {
-					mBarometerView.setText(baroText);
-				}
-
-			});
-
-		}
-		*/
 
 		/**
 		 * Called on receiving a new humidity measurement. Displays the new value.

@@ -152,8 +152,9 @@ int layout services_browser 0x7f04000c
 int menu device_activity_actions 0x7f0b0000
 int menu main_activity_actions 0x7f0b0001
 int menu toolbar_menu 0x7f0b0002
-int mipmap ic_launcher 0x7f030000
-int mipmap ic_launcher_round 0x7f030001
+int mipmap ht_launcher 0x7f030000
+int mipmap ic_launcher 0x7f030001
+int mipmap ic_launcher_round 0x7f030002
 int string about 0x7f0a0000
 int string acc 0x7f0a0001
 int string action_settings 0x7f0a0002

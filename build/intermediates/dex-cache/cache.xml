@@ -7,8 +7,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5e35009582ac6ae63170b16de4f500f2a45a7e50">
+        sha1="a736c74d046e4bd84702b08b44841675bdaa8d0b">
         <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4e9242c54f0a2bd00117bf07ded24f3b95053bf9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Karimi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\pre-dexed\debug\support-v4-19.1.0_28ac4a145edba98f4e853a73b134cf5b45e80e2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\sensorTagLib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d755e8bf0f9c067acd69f7d8525d2a32cc688bdb">
+        <dex dex="C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\build\intermediates\pre-dexed\debug\classes_15c1202d295897bb6b881f362e4925813080e3dc.jar" />
     </item>
     <item
         is-multidex="true"

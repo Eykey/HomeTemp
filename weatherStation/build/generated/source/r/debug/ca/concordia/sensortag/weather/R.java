@@ -179,8 +179,9 @@ public final class R {
         public static final int toolbar_menu=0x7f0b0002;
     }
     public static final class mipmap {
-        public static final int ic_launcher=0x7f030000;
-        public static final int ic_launcher_round=0x7f030001;
+        public static final int ht_launcher=0x7f030000;
+        public static final int ic_launcher=0x7f030001;
+        public static final int ic_launcher_round=0x7f030002;
     }
     public static final class string {
         public static final int about=0x7f0a0000;
