@@ -100,7 +100,7 @@ application do (permissions which the user has to accept when installing the app
             android:screenOrientation="portrait" >
         </activity>
 
-        <activity android:name=".ConnectHC"
+        <activity android:name=".PairHC"
             android:screenOrientation="portrait" >
         </activity>
 

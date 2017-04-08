@@ -19,11 +19,10 @@ import java.util.Set;
 import ca.concordia.sensortag.weather.helper.SessionManager;
 
 /**
- * Created by Karimi on 2017-04-07.
+ * Created by Karimi on 2017-04-08.
  */
 
-public class ConnectHC extends Activity {
-
+public class PairHC extends Activity {
     Button btnPaired;
     ListView devicelist;
 
@@ -36,8 +35,8 @@ public class ConnectHC extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connecthc);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pairhc);
 
 
         //Calling widgets
@@ -107,12 +106,13 @@ public class ConnectHC extends Activity {
             session.setBt(true);
 
             // Make an intent to start next activity.
-            Intent i = new Intent(ConnectHC.this, WeatherStationActivity.class);
+            Intent i = new Intent(PairHC.this, WeatherStationActivity.class);
 
             //Change the activity.
             i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity
             startActivity(i);
         }
     };
+
 
 }

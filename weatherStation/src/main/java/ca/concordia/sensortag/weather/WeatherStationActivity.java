@@ -6,7 +6,9 @@
  */
 package ca.concordia.sensortag.weather;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.UUID;
 
 import ca.concordia.sensortag.weather.helper.SessionManager;
 import ti.android.ble.sensortag.Sensor;
@@ -21,6 +23,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -46,6 +49,8 @@ public class WeatherStationActivity extends Activity {
 
 	static public final String TAG = "WeatherSt"; // Tag for Android's logcat
 	static protected final int UPDATE_PERIOD_MS = 2000; // How often measurements should be taken
+
+    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
 	// Define formatters for converting the sensor measurement into a string to show on the screen
 	private final static DecimalFormat tempFormat = new DecimalFormat("###0.0;-##0.0");
@@ -96,13 +101,17 @@ public class WeatherStationActivity extends Activity {
         // Session manager
         session = new SessionManager(getApplicationContext());
 
-		if(!session.isBtConnected())
-			gotoConnectHC();
+ //       if(!session.isBtConnected()) {
+ //           gotoPairHC();
+ //           session.setBt(true);
+ //       }
 
 		// Get the Bluetooth device selected by the user - should be set by DeviceSelectActivity
 		Intent receivedIntent = getIntent();
-		mBtDevice = (BluetoothDevice) receivedIntent
+        mBtDevice = (BluetoothDevice) receivedIntent
 				.getParcelableExtra(DeviceSelectActivity.EXTRA_DEVICE);
+
+        address = receivedIntent.getStringExtra(PairHC.EXTRA_ADDRESS); //receive the address of the bluetooth device
 
 		// If we didn't get a device, we can't do anything! Warn the user, log and exit.
 		if (mBtDevice == null) {
@@ -112,6 +121,8 @@ public class WeatherStationActivity extends Activity {
 			finish();
 			return;
 		}
+
+        new ConnectBT().execute(); //Call the class to connect
 
 		// Prepare the SensorTag
 		mStManager = new SensorTagManager(this, mBtDevice);
@@ -125,34 +136,6 @@ public class WeatherStationActivity extends Activity {
 			return;
 		}
 
-		/* This section is different from the minimal example, and so warrants explanations.
-		 * 
-		 * There are two things going on in this code:
-		 * 		1) We check whether or not enableSensor() worked.
-		 * 		2) We try to set the update period (how often measurements are sent from the sensor).
-		 *
-		 * 1. mStManager.enableSensor() returns true if enabling the sensor succeeded, but if the
-		 * SensorTag takes too long to respond or returns an error it returns false. If you want to
-		 * use a sensor, it makes sense that you want to know whether enabling the sensor worked or
-		 * not: if it didn't work but you NEED it, you can show the user an error and exit; if it's
-		 * not vital, you probably want to tell the user something broke anyway and then keep going.
-		 * 
-		 * In this case, what we do is use a boolean variable "res" to store the result of
-		 * enableSensor(): for every enableSensor() call, we take the logical AND of the new
-		 * enableSensor() result and the old "res" value. That way, if ANY of the enableSensor()
-		 * calls fail, "res" will be false and then at the end we know one of the sensors failed:
-		 * therefore, we show an error to the user and exit.
-		 * 
-		 * 2. Some of the sensors are capable of having the update period (how often a measurement
-		 * is taken from the sensor) changed when you enable the sensor. This depends on the
-		 * firmware version of the SensorTag, therefore the SensorTagManager has an
-		 * isPeriodSupported(Sensor) that checks whether or not your specific SensorTag supports
-		 * setting the period of the Sensor specified.
-		 * 
-		 * If the period is supported, we set it to UPDATE_PERIOD_MS; if not, it's not vital to
-		 * the app, so we just enable the sensor without setting a period value (in this case, a
-		 * default value is used: usually 1000ms or 2000ms, depending on the sensor).
-		 */
 		boolean res = true;
 		if (mStManager.isPeriodSupported(Sensor.IR_TEMPERATURE))
 			res = res && mStManager.enableSensor(Sensor.IR_TEMPERATURE, UPDATE_PERIOD_MS);
@@ -185,38 +168,6 @@ public class WeatherStationActivity extends Activity {
 		// Set up the GUI switches for displayed measurement units
 		mTemperatureUnitSwitch = (Switch) findViewById(R.id.temp_unit_switch);
 
-
-		/* The code below shows you how you can capture a "click" event, in order to run some code
-		 * whenever the user clicks on a switch. The button and other GUI elements follow a similar
-		 * principle; you will see an example of a button in the DataSample example.
-		 * 
-		 * Switches use the idea of a "Listener", in a similar way to the SensorTagManager, as you
-		 * saw with ManagerListener in the Minimal example and the one in this example. In fact,
-		 * this idea of an object (the switch) having a "Listener" (or "Observer") is VERY commonly
-		 * used in Android.
-		 * 
-		 * The first thing that happens is that we define and instantiate an anonymous class that
-		 * extends OnCheckedChangeListener. That's the
-		 * 
-		 * 		new OnCheckedChangedListener () {
-		 * 			// ...
-		 * 		};
-		 * 
-		 * part. The onCheckedChanged() method is what's called whenever the user clicks on the
-		 * Switch and changes its state on/off. It is passed two parameters: the buttonView
-		 * parameter is just a reference to the Button object that was clicked (so you can do
-		 * operations on it, like change the text on the button, disable it, even undo the user's
-		 * click if for some reason the user isn't allowed to change the state according to your
-		 * app). The second parameter, isChecked, tells you whether the button was changed to the
-		 * on or off position.
-		 * 
-		 * The second thing that happens is that we take this new OnCheckedChangeListener-extended
-		 * object, and we pass it to Switch.setOnCheckedChangeListener for the switch we want to
-		 * apply it to. This is the same idea as mStManager.addListener().
-		 * 
-		 * After we set the listener, whenever the switch is clicked, Android will call
-		 * onCheckedChanged() in the listener that you set on the switch.
-		 */
 		mTemperatureUnitSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			/**
@@ -257,7 +208,7 @@ public class WeatherStationActivity extends Activity {
 		mTemperatureView.setText("--.-");
 		IdealTempEdit.setText("22");
 		mHumidityView.setText("--.-");
-	}
+    }
 
 	/**
 	 * Called by Android when the Activity is started again. This is shown just for completion:
@@ -282,46 +233,26 @@ public class WeatherStationActivity extends Activity {
 		if (mStManager != null) mStManager.enableUpdates();
 	}
 
-	/**
-	 * Called by Android when the Activity goes out of focus (for example, if another Application
-	 * pops up on top of it and partially obscures it). When called, this method disables processing
-	 * sensor measurements but does not close the Bluetooth connection or disable the sensors,
-	 * allowing the application to restore quickly when it comes into the foreground again.
-	 * 
-	 * @see https://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle
-	 */
+
 	@Override
 	protected void onPause() {
 		super.onPause();
 		if (mStManager != null) mStManager.disableUpdates();
 	}
 
-	/**
-	 * Called by Android when the Activity is stopped, e.g. when another Activity is opened full-
-	 * screen and this Activity goes into the background. This method is always called after
-	 * onPause() and differs from that method in that onStop() will not be called if an Activity
-	 * pops up on top of the Activity, not full screen, while onPause() will.
-	 * 
-	 * This is shown just for completion: since there is no code in onStart(), it does not need to
-	 * be overridden here.
-	 * 
-	 * @see https://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle
-	 */
+
 	@Override
 	protected void onStop() {
 		super.onStop();
 	}
 
-	/**
-	 * Called when the Activity is destroyed by Android. Cleans up the Bluetooth connection to the
-	 * SensorTag.
-	 * 
-	 * @see https://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle
-	 */
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		if (mStManager != null) mStManager.close();
+        Disconnect();
+        session.setBt(false);
 	}
 
 	/**
@@ -351,14 +282,6 @@ public class WeatherStationActivity extends Activity {
 
 	}
 
-	/**
-	 * Convert the temperature to the unit currently set by the loaded settings (mIsTempFahrenheit
-	 * member variable).
-	 * 
-	 * @param celsius
-	 *            The temperature value in Celsius.
-	 * @return The converted temperature value.
-	 */
 	private double convertTemperatureUnit(double celsius) {
 		return mIsTempFahrenheit ? (1.8 * celsius + 32) : celsius;
 	}
@@ -527,7 +450,68 @@ public class WeatherStationActivity extends Activity {
 		}
 
 	}
+    private class ConnectBT extends AsyncTask<Void, Void, Void>  // UI thread
+    {
+        private boolean ConnectSuccess = true; //if it's here, it's almost connected
 
+        @Override
+        protected void onPreExecute()
+        {
+            progress = ProgressDialog.show(WeatherStationActivity.this, "Connecting...", "Please wait!!!");  //show a progress dialog
+        }
+
+        @Override
+        protected Void doInBackground(Void... devices) //while the progress dialog is shown, the connection is done in background
+        {
+            try
+            {
+                if (btSocket == null || !isBtConnected)
+                {
+                    myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
+                    BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
+                    btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
+                    BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
+                    btSocket.connect();//start connection
+                }
+            }
+            catch (IOException e)
+            {
+                ConnectSuccess = false;//if the try failed, you can check the exception here
+            }
+            return null;
+        }
+        @Override
+        protected void onPostExecute(Void result) //after the doInBackground, it checks if everything went fine
+        {
+            super.onPostExecute(result);
+
+            if (!ConnectSuccess)
+            {
+                msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
+                finish();
+            }
+            else
+            {
+                msg("Connected.");
+                isBtConnected = true;
+            }
+            progress.dismiss();
+        }
+    }
+    private void Disconnect()
+    {
+        if (btSocket!=null) //If the btSocket is busy
+        {
+            try
+            {
+                btSocket.close(); //close connection
+            }
+            catch (IOException e)
+            { msg("Error");}
+        }
+        finish(); //return to the first layout
+
+    }
 
     // creating action button
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -564,8 +548,8 @@ public class WeatherStationActivity extends Activity {
         finish();
     }
 
-    public void gotoConnectHC(){
-		Intent i = new Intent(getApplicationContext(), ConnectHC.class);
+    public void gotoPairHC(){
+		Intent i = new Intent(getApplicationContext(), PairHC.class);
 		startActivity(i);
 		finish();
 	}
@@ -592,4 +576,9 @@ public class WeatherStationActivity extends Activity {
 	public void onBackPressed(){
 		// Disabling OS back button
 	}
+
+    private void msg(String s)
+    {
+        Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+    }
 }

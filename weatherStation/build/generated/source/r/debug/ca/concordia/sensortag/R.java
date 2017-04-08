@@ -39,12 +39,12 @@ public final class R {
         public static final int barPanel = 0x7f0c0044;
         public static final int barometerTxt = 0x7f0c0045;
         public static final int btnConnect = 0x7f0c002d;
-        public static final int btn_confirm = 0x7f0c0004;
-        public static final int btn_load_a = 0x7f0c0007;
-        public static final int btn_load_b = 0x7f0c0008;
-        public static final int btn_load_c = 0x7f0c0009;
+        public static final int btn_confirm = 0x7f0c0002;
+        public static final int btn_load_a = 0x7f0c0005;
+        public static final int btn_load_b = 0x7f0c0006;
+        public static final int btn_load_c = 0x7f0c0007;
         public static final int btn_scan = 0x7f0c0034;
-        public static final int btn_start = 0x7f0c000d;
+        public static final int btn_start = 0x7f0c000b;
         public static final int buttonOK = 0x7f0c0029;
         public static final int buttons = 0x7f0c0037;
         public static final int content = 0x7f0c0027;
@@ -58,7 +58,7 @@ public final class R {
         public static final int humidityTxt = 0x7f0c0043;
         public static final int info = 0x7f0c002b;
         public static final int keyPanel = 0x7f0c0036;
-        public static final int lw_file = 0x7f0c0003;
+        public static final int lw_file = 0x7f0c0001;
         public static final int magPanel = 0x7f0c003a;
         public static final int magnetometerTxt = 0x7f0c003b;
         public static final int name = 0x7f0c0012;
@@ -74,22 +74,22 @@ public final class R {
         public static final int opt_sthome = 0x7f0c004c;
         public static final int pager = 0x7f0c002f;
         public static final int pb_busy = 0x7f0c0031;
-        public static final int pb_progress = 0x7f0c000b;
+        public static final int pb_progress = 0x7f0c0009;
         public static final int services_browser_layout = 0x7f0c0035;
         public static final int status = 0x7f0c0033;
         public static final int statusPanel = 0x7f0c0046;
         public static final int title = 0x7f0c0025;
-        public static final int tw_directory = 0x7f0c0002;
-        public static final int tw_file = 0x7f0c0006;
-        public static final int tw_info = 0x7f0c000a;
-        public static final int tw_log = 0x7f0c000c;
-        public static final int tw_target = 0x7f0c0005;
+        public static final int tw_directory = 0x7f0c0000;
+        public static final int tw_file = 0x7f0c0004;
+        public static final int tw_info = 0x7f0c0008;
+        public static final int tw_log = 0x7f0c000a;
+        public static final int tw_target = 0x7f0c0003;
         public static final int uuid = 0x7f0c002a;
         public static final int webpage = 0x7f0c002e;
     }
     public static final class layout {
-        public static final int activity_file = 0x7f040001;
-        public static final int activity_fwupdate = 0x7f040002;
+        public static final int activity_file = 0x7f040000;
+        public static final int activity_fwupdate = 0x7f040001;
         public static final int dialog_about = 0x7f040006;
         public static final int element_characteristic = 0x7f040007;
         public static final int element_device = 0x7f040008;

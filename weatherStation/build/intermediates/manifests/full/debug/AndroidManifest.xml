@@ -98,7 +98,7 @@ application do (permissions which the user has to accept when installing the app
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="ca.concordia.sensortag.weather.ConnectHC"
+            android:name="ca.concordia.sensortag.weather.PairHC"
             android:screenOrientation="portrait" >
         </activity>
 
