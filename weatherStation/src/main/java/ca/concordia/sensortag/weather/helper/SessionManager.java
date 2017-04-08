@@ -28,6 +28,7 @@ public class SessionManager {
     private static final String PREF_NAME = "ProfilePreference";
 
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+    private static final String KEY_IS_BT_CONNECTED = "isBtConnected";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_FULLNAME = "fullname";
     private static final String KEY_PASSWORD = "password";
@@ -44,6 +45,7 @@ public class SessionManager {
         editor.putString(KEY_PASSWORD, user.getPassword());
         editor.putLong(KEY_ID, user.getUserID());
         editor.putBoolean(KEY_IS_LOGGED_IN, true);
+        editor.putBoolean(KEY_IS_BT_CONNECTED, false);
 
         // commit changes
         editor.commit();
@@ -61,7 +63,18 @@ public class SessionManager {
         Log.d(TAG, "User login session modified!");
     }
 
+    public void setBt(boolean isBtConnected) {
+
+        editor.putBoolean(KEY_IS_LOGGED_IN, isBtConnected);
+
+        // commit changes
+        editor.commit();
+
+        Log.d(TAG, "User Bluetooth status modified!");
+    }
+
     public boolean isLoggedIn(){
         return pref.getBoolean(KEY_IS_LOGGED_IN, false);
     }
+    public boolean isBtConnected() { return pref.getBoolean(KEY_IS_BT_CONNECTED, false);}
 }

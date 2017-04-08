@@ -130,4 +130,8 @@ public class LoginActivity extends Activity {
             pDialog.dismiss();
     }
 
+    public void onBackPressed(){
+        // Disabling OS back button
+    }
+
 }

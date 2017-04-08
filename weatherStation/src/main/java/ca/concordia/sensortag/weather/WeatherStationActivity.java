@@ -16,7 +16,10 @@ import ca.concordia.sensortag.SensorTagManager;
 import ca.concordia.sensortag.SensorTagManager.ErrorType;
 import ca.concordia.sensortag.SensorTagManager.StatusType;
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,13 +50,11 @@ public class WeatherStationActivity extends Activity {
 	// Define formatters for converting the sensor measurement into a string to show on the screen
 	private final static DecimalFormat tempFormat = new DecimalFormat("###0.0;-##0.0");
 	private final static DecimalFormat humiFormat = new DecimalFormat("##0.0");
-;
 
-	// GUI elements - TextView is the Java class for text-box elements on the screen, and
-	// Switch is the Java class for the on-off switch element
-	private TextView mTemperatureView;
-	private TextView mTemperatureUnitView;
-	private EditText IdealTempEdit;
+
+    private TextView mTemperatureView;
+    private TextView mTemperatureUnitView;
+    private EditText IdealTempEdit;
 	private TextView IdealTempUnitView;
 	private TextView mHumidityView;
 	@SuppressWarnings("unused")
@@ -61,26 +62,18 @@ public class WeatherStationActivity extends Activity {
 
 	private Button SetTempButton;
 	private Switch mTemperatureUnitSwitch;
-	private Switch mBarometerUnitSwitch;
 
-	// These are "cached" copies of the last value received from the SensorTag.
-	// We save this so that, if the user changes the unit, we can immediately update the GUI
-	// (if we didn't have the last value, we'd have to wait until a new value is received to
-	// calculate and show it in the correct unit).
 	private double minRange = Double.NaN;
 	private double maxRange = Double.NaN;
 
 	private double mLastTemperature = Double.NaN;
 	@SuppressWarnings("unused")
 	private double mLastHumidity = Double.NaN;
-	//private double mLastPressure = Double.NaN;
 
 	// Unit setting - these values are used to determine which unit to show for temp/pressure.
 	// They are changed when the user clicks the switches to change the unit.
 	private boolean mIsTempFahrenheit = false;
 
-	public enum BarometerUnit { KILOPASCAL, MILLIBAR, INCH_HG };
-	private BarometerUnit mBaroUnit = BarometerUnit.KILOPASCAL;
 
 	// Bluetooth communication with the SensorTag
 	private BluetoothDevice mBtDevice;
@@ -89,23 +82,12 @@ public class WeatherStationActivity extends Activity {
 
     private SessionManager session;
 
-	/**
-	 * Called when the Activity is created. Sets up the GUI, checks whether a Bluetooth Device was
-	 * sent from the DeviceConnectActivity via the Intent sent, and initialises the Bluetooth
-	 * communication with the SensorTag.
-	 * 
-	 * See the Minimal example for more detailed explanations of this code. A little note: except
-	 * for the enable sensor logic, the comments you find in this section of the code are similar
-	 * to what you would expect real-life comments to look like: they don't explain the code itself,
-	 * but the INTENTION or INTERPRETATION of the code when needed, or other details that aren't
-	 * obvious for a programmer reading the code.
-	 * 
-	 * CHANGE ME: if you want to modify this app to show different data from different sensors,
-	 * you need to add/remove/change the mStManager.setEnable calls in order to enable only the
-	 * sensors you want to use.
-	 * 
-	 * @see https://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle
-	 */
+	String address = null;
+	private ProgressDialog progress;
+	BluetoothAdapter myBluetooth = null;
+	BluetoothSocket btSocket = null;
+	private boolean isBtConnected = false;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -113,6 +95,9 @@ public class WeatherStationActivity extends Activity {
 
         // Session manager
         session = new SessionManager(getApplicationContext());
+
+//		if(!session.isBtConnected())
+//			gotoConnectHC();
 
 		// Get the Bluetooth device selected by the user - should be set by DeviceSelectActivity
 		Intent receivedIntent = getIntent();
@@ -579,6 +564,12 @@ public class WeatherStationActivity extends Activity {
         finish();
     }
 
+    public void gotoConnectHC(){
+		Intent i = new Intent(getApplicationContext(), ConnectHC.class);
+		startActivity(i);
+		finish();
+	}
+
     private void addSensor(){
         Intent i = new Intent(getApplicationContext(), DeviceSelectActivity.class);
         startActivity(i);
@@ -596,6 +587,9 @@ public class WeatherStationActivity extends Activity {
 					"Area is hot!", Toast.LENGTH_SHORT)
 					.show();
 		}
+	}
 
+	public void onBackPressed(){
+		// Disabling OS back button
 	}
 }
