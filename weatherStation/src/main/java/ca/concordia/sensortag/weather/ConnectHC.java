@@ -43,7 +43,7 @@ public class ConnectHC extends Activity {
         //Calling widgets
         btnPaired = (Button)findViewById(R.id.button);
         devicelist = (ListView)findViewById(R.id.listView);
-/*
+
         //if the device has bluetooth
         myBluetooth = BluetoothAdapter.getDefaultAdapter();
 
@@ -69,9 +69,9 @@ public class ConnectHC extends Activity {
                 pairedDevicesList();
             }
         });
-*/
+
     }
-/*
+
     private void pairedDevicesList()
     {
         pairedDevices = myBluetooth.getBondedDevices();
@@ -94,8 +94,8 @@ public class ConnectHC extends Activity {
         devicelist.setOnItemClickListener(myListClickListener); //Method called when the device from the list is clicked
 
     }
-    */
-/*
+
+
     private AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener()
     {
         public void onItemClick (AdapterView<?> av, View v, int arg2, long arg3)
@@ -114,5 +114,5 @@ public class ConnectHC extends Activity {
             startActivity(i);
         }
     };
-*/
+
 }

@@ -96,8 +96,8 @@ public class WeatherStationActivity extends Activity {
         // Session manager
         session = new SessionManager(getApplicationContext());
 
-//		if(!session.isBtConnected())
-//			gotoConnectHC();
+		if(!session.isBtConnected())
+			gotoConnectHC();
 
 		// Get the Bluetooth device selected by the user - should be set by DeviceSelectActivity
 		Intent receivedIntent = getIntent();
