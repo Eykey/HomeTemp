@@ -21,6 +21,7 @@ import ca.concordia.sensortag.weather.helper.SessionManager;
 
 public class LoginActivity extends Activity {
 
+    private boolean loginFail = false;
     private Button btnLogin;
     private Button btnLinkToRegister;
     private EditText inputUserName;
@@ -66,6 +67,8 @@ public class LoginActivity extends Activity {
                 if (!username.isEmpty() && !password.isEmpty()) {
                     // login user
                     checkLogin(username, password);
+                    if(loginFail)
+                        Toast.makeText(getApplicationContext(), "Username or Password invalid.", Toast.LENGTH_LONG).show();
                 } else {
                     // Prompt user to enter credentials
                     Toast.makeText(getApplicationContext(),
@@ -111,13 +114,12 @@ public class LoginActivity extends Activity {
         }
 
         hideDialog();
-        Toast.makeText(getApplicationContext(), "Username or Password invalid.", Toast.LENGTH_LONG).show();
+
     }
 
     public void gotoMainActivity(){
         Intent intent = new Intent(LoginActivity.this, DeviceSelectActivity.class);
         startActivity(intent);
-        finish();
     }
 
     private void showDialog() {

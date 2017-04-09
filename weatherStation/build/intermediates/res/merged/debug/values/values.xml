@@ -54,8 +54,8 @@
     <string name="bt_not_on">Bluetooth was not turned on</string>
     <string name="bt_not_supported">Bluetooth is not supported</string>
     <string name="bt_on">Bluetooth was turned on</string>
-    <string name="btn_link_to_login">Already registred! Login Me.</string>
-    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Log Me In.</string>
+    <string name="btn_link_to_register">Create Account.</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="btn_register">REGISTER</string>

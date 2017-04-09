@@ -87,31 +87,20 @@ public class WeatherStationActivity extends Activity {
 
     private SessionManager session;
 
-	String address = null;
-	private ProgressDialog progress;
-	BluetoothAdapter myBluetooth = null;
-	BluetoothSocket btSocket = null;
-	private boolean isBtConnected = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_weather_station);
-
+        setContentView(R.layout.activity_weather_station);
         // Session manager
         session = new SessionManager(getApplicationContext());
-
- //       if(!session.isBtConnected()) {
- //           gotoPairHC();
- //           session.setBt(true);
- //       }
 
 		// Get the Bluetooth device selected by the user - should be set by DeviceSelectActivity
 		Intent receivedIntent = getIntent();
         mBtDevice = (BluetoothDevice) receivedIntent
 				.getParcelableExtra(DeviceSelectActivity.EXTRA_DEVICE);
 
-        address = receivedIntent.getStringExtra(PairHC.EXTRA_ADDRESS); //receive the address of the bluetooth device
+ //       address = receivedIntent.getStringExtra(PairHC.EXTRA_ADDRESS); //receive the address of the bluetooth device
 
 		// If we didn't get a device, we can't do anything! Warn the user, log and exit.
 		if (mBtDevice == null) {
@@ -122,7 +111,6 @@ public class WeatherStationActivity extends Activity {
 			return;
 		}
 
-        new ConnectBT().execute(); //Call the class to connect
 
 		// Prepare the SensorTag
 		mStManager = new SensorTagManager(this, mBtDevice);
@@ -210,7 +198,9 @@ public class WeatherStationActivity extends Activity {
 		mHumidityView.setText("--.-");
     }
 
-	/**
+
+
+    /**
 	 * Called by Android when the Activity is started again. This is shown just for completion:
 	 * since there is no code in onStart(), it does not need to be overridden here.
 	 * 
@@ -251,8 +241,6 @@ public class WeatherStationActivity extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 		if (mStManager != null) mStManager.close();
-        Disconnect();
-        session.setBt(false);
 	}
 
 	/**
@@ -382,17 +370,7 @@ public class WeatherStationActivity extends Activity {
 		public void onError(SensorTagManager mgr, ErrorType type, String msg) {
 			super.onError(mgr, type, msg);
 			
-			// This was not in the Minimal example, but it could have been added there (if it were
-			// not, you know, a minimal example!). This onError() method is called by
-			// SensorTagManager if an error happens related to the SensorTag; it is not attached to
-			// a sensor measurement, unlike all the other methods.
-			//
-			// This lets an application take some action when an error happens. In this case,
-			// we just pick a "user-friendly" string to show depending on the error type (the
-			// "type" parameter), and then show that on the screen as a Toast.
-			//
-			// Quick note: a Toast is a small text box near the bottom of the screen that disappears
-			// on its own after a short amount of time.
+
 			String text = null;
 			switch (type) {
 			case GATT_REQUEST_FAILED:
@@ -450,68 +428,7 @@ public class WeatherStationActivity extends Activity {
 		}
 
 	}
-    private class ConnectBT extends AsyncTask<Void, Void, Void>  // UI thread
-    {
-        private boolean ConnectSuccess = true; //if it's here, it's almost connected
 
-        @Override
-        protected void onPreExecute()
-        {
-            progress = ProgressDialog.show(WeatherStationActivity.this, "Connecting...", "Please wait!!!");  //show a progress dialog
-        }
-
-        @Override
-        protected Void doInBackground(Void... devices) //while the progress dialog is shown, the connection is done in background
-        {
-            try
-            {
-                if (btSocket == null || !isBtConnected)
-                {
-                    myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-                    BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
-                    btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
-                    BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
-                    btSocket.connect();//start connection
-                }
-            }
-            catch (IOException e)
-            {
-                ConnectSuccess = false;//if the try failed, you can check the exception here
-            }
-            return null;
-        }
-        @Override
-        protected void onPostExecute(Void result) //after the doInBackground, it checks if everything went fine
-        {
-            super.onPostExecute(result);
-
-            if (!ConnectSuccess)
-            {
-                msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
-                finish();
-            }
-            else
-            {
-                msg("Connected.");
-                isBtConnected = true;
-            }
-            progress.dismiss();
-        }
-    }
-    private void Disconnect()
-    {
-        if (btSocket!=null) //If the btSocket is busy
-        {
-            try
-            {
-                btSocket.close(); //close connection
-            }
-            catch (IOException e)
-            { msg("Error");}
-        }
-        finish(); //return to the first layout
-
-    }
 
     // creating action button
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -532,7 +449,7 @@ public class WeatherStationActivity extends Activity {
 
             // When AddSensoris clicked
             case R.id.action_addSensor:
-                addSensor();
+                gotoPairHC();
                 return true;
 
 
@@ -542,22 +459,20 @@ public class WeatherStationActivity extends Activity {
     }
 
 
+
     public void gotoLoginActivity(){
         Intent i = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(i);
-        finish();
     }
 
-    public void gotoPairHC(){
-		Intent i = new Intent(getApplicationContext(), PairHC.class);
-		startActivity(i);
-		finish();
-	}
 
-    private void addSensor(){
-        Intent i = new Intent(getApplicationContext(), DeviceSelectActivity.class);
+    private void gotoPairHC(){
+        mBtDevice = null;
+        mStManager = null;
+        mStListener = null;
+
+        Intent i = new Intent(getApplicationContext(), PairHC.class);
         startActivity(i);
-        finish();
     }
 
     public void VerifyRange(double temp){
@@ -577,8 +492,4 @@ public class WeatherStationActivity extends Activity {
 		// Disabling OS back button
 	}
 
-    private void msg(String s)
-    {
-        Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
-    }
 }

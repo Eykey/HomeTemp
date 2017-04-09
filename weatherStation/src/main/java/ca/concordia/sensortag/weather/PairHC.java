@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Set;
 
-import ca.concordia.sensortag.weather.helper.SessionManager;
+
 
 /**
  * Created by Karimi on 2017-04-08.
@@ -31,7 +31,6 @@ public class PairHC extends Activity {
     private Set<BluetoothDevice> pairedDevices;
     public static String EXTRA_ADDRESS = "device_address";
 
-    private SessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +102,8 @@ public class PairHC extends Activity {
             String info = ((TextView) v).getText().toString();
             String address = info.substring(info.length() - 17);
 
-            session.setBt(true);
-
             // Make an intent to start next activity.
-            Intent i = new Intent(PairHC.this, WeatherStationActivity.class);
+            Intent i = new Intent(PairHC.this, Control.class);
 
             //Change the activity.
             i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity

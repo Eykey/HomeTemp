@@ -104,6 +104,10 @@ application do (permissions which the user has to accept when installing the app
             android:screenOrientation="portrait" >
         </activity>
 
+        <activity android:name=".Control"
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>

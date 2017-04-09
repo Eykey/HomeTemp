@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:8:1-109:12
+ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:8:1-113:12
 	package
 		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:11:5-45
 		INJECTED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml
@@ -42,7 +42,7 @@ MERGED from [WeatherStation:sensorTagLib:unspecified] C:\Users\Karimi\AndroidStu
 	android:name
 		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:46:9-54
 application
-ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:53:5-107:19
+ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:53:5-111:19
 MERGED from [WeatherStation:sensorTagLib:unspecified] C:\Users\Karimi\AndroidStudioProjects\WeatherStation\sensorTagLib\build\intermediates\bundles\default\AndroidManifest.xml:37:5-80:19
 	android:label
 		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:56:9-41
@@ -114,6 +114,12 @@ ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\s
 		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:104:13-49
 	android:name
 		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:103:19-41
+activity#ca.concordia.sensortag.weather.Control
+ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:107:9-109:20
+	android:screenOrientation
+		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:108:13-49
+	android:name
+		ADDED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml:107:19-42
 uses-sdk
 INJECTED from C:\Users\Karimi\AndroidStudioProjects\WeatherStation\weatherStation\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [WeatherStation:sensorTagLib:unspecified] C:\Users\Karimi\AndroidStudioProjects\WeatherStation\sensorTagLib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41

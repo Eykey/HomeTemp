@@ -101,6 +101,10 @@ application do (permissions which the user has to accept when installing the app
             android:name="ca.concordia.sensortag.weather.PairHC"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="ca.concordia.sensortag.weather.Control"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <!--
        Activity that is listed in Android's Applications drawer. You can have
