@@ -7,7 +7,7 @@
         android:id="@+id/action_logout" />
 
     <item
-        android:title="Add Sensor"
+        android:title="Control Heater"
         android:id="@+id/action_addSensor" />
 
 </menu>
